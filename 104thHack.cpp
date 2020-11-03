@@ -8,7 +8,7 @@ using namespace std;
 bool getKey(int key, int rands[], int guesses[], int size){
     
     bool status = true;
-    
+    //PasswrdDecrypt
     int i;
     for(i = 0; i <= size; i++)
     {
@@ -27,6 +27,7 @@ bool getKey(int key, int rands[], int guesses[], int size){
     check = false;
     int correctnum;
     correctnum = 0;
+    //Checker
         for(int i = 0; i <= size; i++){
             int j = i;
             if(int(guesses[j]) == int(rands[j])){
@@ -91,7 +92,7 @@ int main(){
             cout << "Key to decrypt is: " << key << endl;
             cout << "Please decrypt the key and enter your answer" << endl;
             cout << "Place a space between the numbers" << endl;
- 
+            //UserInputStatement
             cin >> guess2[0] >> guess2[1] >> guess2[2] >> guess2[3];
 
             if(getKey(key,randomvalues,guess2,3)==true)
